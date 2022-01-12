@@ -1,13 +1,177 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: rgba(0, 7, 51, 0.89);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header {
+  color: #ff6a95;
+  font-weight: 300;
+  font-size: 15px;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.card {
+  background: rgba(255, 255, 255);
+  border-radius: 10px;
+  width: 40vw;
+  padding: 20px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.card.reverse {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+.card form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+.card-header {
+  font-size: 17px;
+}
+.form-text-group {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.form-text-group input {
+  width: 60%;
+  height: 30px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+.form-text-group input:focus {
+  border: 2px solid #333;
+  outline: none;
+}
+
+.btn {
+  padding: 3px 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #888;
+  color: #fff;
+}
+.btn:disabled {
+  cursor: default;
+}
+.btn-primary {
+  background: #ff6a95;
+}
+.btn-secondary {
+  background: rgba(0, 7, 51, 0.747);
+}
+.card-num-display {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ff6a95;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 50%;
+}
+
+.close {
+  font-size: 15px;
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+.edit {
+  font-size: 15px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 5px;
+}
+
+.card-text-display {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.feedback-stats {
+  width: 40vw;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.rating-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.radio-input {
+  display: none;
+}
+
+.radio-label {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #99999966;
+  color: #000;
+  font-weight: 600;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.radio-label:hover {
+  background: #ff6a95;
+  color: #fff;
+}
+
+.radio-input:checked + .radio-label {
+  background: #ff6a95;
+  color: #fff;
+}
+
+.about-button {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+.about-button:hover {
+  color: #ff6a95;
 }
